@@ -1,0 +1,112 @@
+<%- include("../header.ejs") %> <%- include("../sidebar.ejs") %>
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Student Update Data</h1>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active">Display</li>
+          </ol>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+  <!-- </div> -->
+  <div class="card">
+    <!-- /.card-header -->
+    <div class="card-body">
+      <div class="modal-body">
+        <form
+          action="/admin/studentupdate/<%= d._id%>"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="form-group">
+            <label for="">Student Name</label>
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              value="<%= d.name%>"
+            />
+            <label for="">Email</label>
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              value="<%= d.email%>"
+            />
+            <label for="">Password</label>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              value="<%= d.password%>"
+            />
+            <label for="">DOB</label>
+            <input
+              type="date"
+              name="dob"
+              class="form-control"
+              value="<%= d.dob%>"
+            />
+            <label for="">Phone</label>
+            <input
+              type="number"
+              name="phone"
+              class="form-control"
+              value="<%= d.phone%>"
+            />
+            <label for="">Roll Number</label>
+            <input
+              type="number"
+              name="rollnumber"
+              class="form-control"
+              value="<%= d.rollnumber%>"
+            />
+            <label for="">Address</label>
+            <textarea name="address" class="form-control">
+                    <%=d.address%>
+                </textarea
+            >
+            <label for="">Courses</label>
+            <input
+              type="text"
+              name="course"
+              value="<%=d.course%>"
+              readonly
+              class="form-control"
+            />
+            <label for="">Image</label>
+            <input type="file" name="image" />
+            <div><img src="<%= d.image.url %>" width="50px" alt="" /></div>
+
+            <center>
+              <button
+                class="btn btn-info"
+                type="submit"
+                style="margin-top: 25px"
+              >
+                Update
+              </button>
+            </center>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- /.card-body -->
+  </div>
+  <!-- /.card -->
+</div>
+
+<%- include("../footer.ejs") %>

@@ -1,0 +1,460 @@
+<%- include("./header.ejs") %>
+<br>
+<center>
+  <% if(msg.length>0){%>
+  <div class="alert alert-success m-2 "><h4><%=msg%></h4></div>
+  
+
+  <%}%>
+</center>
+<div class="carousel slide" data-bs-ride="carousel" id="s">
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#s"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#s"
+      data-bs-slide-to="1"
+      class=""
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="4000">
+      <img
+        src="	https://res.cloudinary.com/djdseaeua/image/upload/v1682605759/sliderImage/fvbumsxdelaomcmmfad3.jpg"
+        class="w-100"
+      />
+    </div>
+    <div class="carousel-item" data-bs-interval="4000">
+      <img
+        src="https://res.cloudinary.com/djdseaeua/image/upload/v1682605719/sliderImage/pfttdnpxt9hmj3chnsqs.jpg"
+        class="w-100"
+      />
+    </div>
+  </div>
+  <!--carousel inner end-->
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#s"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#s"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <h1 class="text-center why">
+        <span>Why</span>
+        Grievance Redressal System?
+      </h1>
+    </div>
+  </div>
+  <!--container end-->
+</div>
+
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="whygreviance justify-content">
+          The Grievance Redressal Cell has been developed to settle the
+          grievances of the students and other stakeholders within a reasonable
+          time period for further strengthening the bond of the students with
+          the institution by providing them with all kind of facilities to a
+          satisfaction level for maintaining a convenient ambience of academic
+          teaching and learning. <br />
+          Oréll believes that providing on time and competent service is
+          essential not only to attract new customers, but also to retain
+          existing ones. ITMGrievance, the revolutionary online grievance
+          handling mechanism aims at minimising instances of complaints in
+          professional
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img
+          src="https://edugrievance.com/image/home-grievance-redressal-system-content-img.png"
+          class="w-100"
+          alt=""
+        />
+      </div>
+    </div>
+    <!--row end-->
+    <div class="row">
+      <p class="whygreviance justify-content">
+        colleges through effective tracking and monitoring of grievances
+        ensuring prompt redressal. This portal for online registration and
+        disposal of grievances help users obtain immediate response and
+        resolution to their grievances from the institution itself
+      </p>
+    </div>
+  </div>
+  <!--container end-->
+</div>
+
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text-center shadow-lg main">
+        <div class="comborder">
+          <a href=" " class="component">
+            <i class="fa-solid fa-user"></i>
+          </a>
+          <h2>Student</h2>
+          <p>Student can manage or view Their Grievance Here..</p>
+          <button
+            data-bs-toggle="modal"
+            data-bs-target="#login"
+            type="button"
+            class="btn loginbt"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+      <div class="col-md-4 text-center shadow-lg main">
+        <div class="comborder">
+          <a href=" " class="component">
+            <i class="fa-solid fa-user-tie"></i>
+          </a>
+          <h2>Dean/Principal</h2>
+          <p>This Section is Managed By the Dean/Principal of ITM University</p>
+
+          <button
+            data-bs-toggle="modal"
+            data-bs-target="#principal"
+            type="button"
+            class="btn loginbt"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+      <div class="col-md-4 text-center shadow-lg main">
+        <div class="comborder">
+          <a href=" " class="component">
+            <i class="fa-solid fa-chalkboard-user"></i>
+          </a>
+          <h2>Handler &amp; Admin</h2>
+          <p>this Section is managed and view by the Grievance handler.</p>
+          <button
+            data-bs-toggle="modal"
+            data-bs-target="#admin"
+            type="button"
+            class="btn loginbt"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--row end-->
+  </div>
+  <!--container- end-->
+</div>
+
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="carousel slide" data-bs-ride="carousel" id="s">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img
+            src="	https://res.cloudinary.com/djdseaeua/image/upload/v1682605759/sliderImage/fvbumsxdelaomcmmfad3.jpg"
+            class="w-100"
+          />
+        </div>
+      </div>
+      <!--carousel inner end-->
+    </div>
+  </div>
+</div>
+<!-- modal start -->
+<!-- Student Login -->
+<div
+  class="modal fade"
+  id="login"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Student Login</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="verifylogin" method="post">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              id="password"
+              placeholder="Enter password"
+            />
+          </div>
+          <br />
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#forgotpassword">
+          Forgot Password
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Principal Login -->
+<div
+  class="modal fade"
+  id="principal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Principal</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="verifylogin" method="post">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              placeholder="Enter password"
+            />
+          </div>
+          <br />
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Login Admin -->
+<div
+  class="modal fade"
+  id="admin"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Admin</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="adminverifylogin" method="post">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              id="password"
+              placeholder="Enter password"
+            />
+          </div>
+          <br />
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#registration"
+          >
+            Register Now?
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Registration Admin -->
+<div
+  class="modal fade"
+  id="registration"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Register Now</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/admininsert" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              id="name"
+              required
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              id="email"
+              required
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              id="password"
+              required
+              placeholder="Choose a password"
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirm password">Confirm Password</label>
+
+            <input
+              type="confirmpassword"
+              class="form-control"
+              name="confirmpassword"
+              id="confirmpassword"
+              placeholder="Enter your Confirm password"
+            />
+          </div>
+          <div class="form-group">
+            <label for="image">Image</label>
+            <input type="file" name="image" class="form-control" id="image" />
+          </div>
+          <br />
+          <button type="submit" class="btn btn-primary btn-block">
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Forgotpassword -->
+<div class="modal fade" id="forgotpassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Forgot Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/forgotpassword" method="post">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+            />
+            <br>
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include("./footer.ejs") %>

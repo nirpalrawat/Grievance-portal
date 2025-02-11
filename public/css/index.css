@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.top-bar {
+    padding: 30px;
+}
+.fa-solid, .fas {
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+}
+.number {
+    font-size: 27px;
+    font-weight: 500;
+}
+.non {
+    text-decoration: none;
+}
+.top-bar a h1 {
+    color: #213e94;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 48px;
+}
+.non span {
+    color: #f3aa92;
+    font-weight: 700;
+    font-size: 42px;
+    padding-top: 50px;
+}
+.icon {
+    font-size: 33px;
+    border-radius: 55px;
+    margin: 3px;
+    color: #213e94;
+}
+
+.navbar {
+    background-color: #213e94 !important;
+}
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+    padding: 20px 15px;
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.carousel {
+    position: relative;
+}
+.why {
+    padding-top: 30px;
+    color: #213e94;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.why span {
+    padding-top: 30px;
+    color: #f3aa92;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.whygreviance {
+    padding-top: 30px;
+    color: #213e94;
+    font-family: sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 19px;
+}
+.main {
+    background-color: #213e94;
+    padding: 20px;
+}
+.component i {
+    font-size: 100px;
+    color: #f3aa92;
+}
+.comborder {
+    border: 2px solid white;
+    padding: 20px;
+}
+.comborder h2 {
+    color: #fff;
+    padding: 5px;
+}
+.comborder p {
+    color: #fff;
+}
+.loginbt {
+    background-color: #f3aa92 !important;
+    color: white !important;
+}
+.w-100 {
+    width: 100% !important;
+}
+.non {
+    text-decoration: none;
+}
+.foot1 p {
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    padding-top: 30px;
+    line-height: 2;
+}
+.non span {
+    color: #f3aa92;
+    font-weight: 700;
+    font-size: 42px;
+    padding-top: 50px;
+}
+
+.foo h1 {
+    color: #213e94;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 42px;
+    padding-top: 50px;
+}
+.foot1 .h2 {
+    font-family: sans-serif;
+    padding-top: 40px;
+    font-size: 28px;
+    font-weight: 600;
+}
+h2 {
+    font-size: 2rem;
+    padding-top: 40px;
+}
+.ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-family: var(--bs-body-font-family);
+}
+h6 {
+    font-size: 1rem;
+}
+.foot1 a i {
+    color: #213e94;
+    font-size: 50px;
+    padding-top: 25px;
+}
+.paddingtop {
+    padding: 40px;
+}
+form {
+    display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+}
+.comborder h2 {
+    color: #fff;
+    padding: 5px;
+}
+.Your {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+}
+.help {
+    padding: 10px;
+}
+.subbtn {
+    background-color: #f3aa92 !important;
+    color: white !important;
+}
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+}
+.cursive {
+    font-family: cursive;
+    color: white;
+    font-weight: 800;
+    font-size: 100px;
+}
+.main {
+    background-color: #213e94;
+    padding: 20px;
+}
+
+/* profile */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    background-color: #6c63ff;
+}
+.profile-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-top: -50px;
+    margin-bottom: 10px;
+}
+.social-icons a {
+    font-size: 20px;
+    margin: 0 10px;
+    color: #6c63ff;
+}
+.btn-custom {
+    background-color: #6c63ff;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin: 5px;
+    
+}
+/* contact */
+#course{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* profile */
+.profile-section {
+    margin: 20px;
+  }
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+  .profile-info {
+    margin-left: 20px;
+  }
+  #watch {
+    width: 200px;
+    height: 200px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    border-radius: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    top: 1.5cm;
+    left: 2cm;
+  }
+
+  .pin {
+    position: absolute;
+    background-color: #fff;
+    transform-origin: bottom center;
+    left: calc(50% - 2px);
+  }
+
+  .pin-hour {
+    top: 60px;
+    height: 39.7px;
+    width: 3px;
+  }
+
+  .pin-minute {
+    top: 35px;
+    background-color: rgb(13, 249, 9);
+    height: 60px;
+    width: 2px;
+  }
+
+  .pin-second {
+    top: 20px;
+    background-color: red;
+    height: 80px;
+    width: 1px;
+  }
+  .circle {
+    background-color: rgb(253, 253, 3);
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    bottom: 105px;
+    right: 95px;
+  }
+
+  .time {
+    margin-top: 40%;
+  }
+  .clock {
+    width: 200px;
+    height: 200px;
+    background-color: #e2dcdc;
+    color: #0f0f0f;
+    display: flex;
+    border-radius: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    position: relative;
+  }
+  .clock-numbers {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .clock-numbers span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+  .clock-numbers span:nth-child(1) {
+    transform: rotate(0deg) translate(40px, -80px);
+  }
+  .clock-numbers span:nth-child(2) {
+    transform: rotate(0deg) translate(75px, -55px);
+  }
+  .clock-numbers span:nth-child(3) {
+    transform: rotate(0deg) translate(90px, -10px);
+  }
+  .clock-numbers span:nth-child(4) {
+    transform: rotate(0deg) translate(85px, 35px);
+  }
+  .clock-numbers span:nth-child(5) {
+    transform: rotate(360deg) translate(50px, 75px);
+  }
+  .clock-numbers span:nth-child(6) {
+    transform: rotate(0deg) translate(0px, 90px);
+  }
+  .clock-numbers span:nth-child(7) {
+    transform: rotate(0deg) translate(-40px, 75px);
+  }
+  .clock-numbers span:nth-child(8) {
+    transform: rotate(150deg) translate(90px, -10px);
+  }
+  .clock-numbers span:nth-child(9) {
+    transform: rotate(0deg) translate(-90px, 10px);
+  }
+  .clock-numbers span:nth-child(10) {
+    transform: rotate(300deg) translate(-10px, -90px);
+  }
+  .clock-numbers span:nth-child(11) {
+    transform: rotate(330deg) translate(-10px, -90px);
+  }
+  .clock-numbers span:nth-child(12) {
+    transform: rotate(360deg) translate(-10px, -90px);
+  }

@@ -1,0 +1,115 @@
+<%- include("../admin/header.ejs") %><%- include("../admin/sidebar.ejs") %>
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-md-12">
+          <h1 class="m-0 text-center m-3">View All Complaint</h1>
+        </div>
+        <center>
+          <% if(msg.length > 0){ %>
+            <div class="alert alert-success">
+                <!-- To Print -->
+                <%= msg %>
+            </div>
+        <% } %>
+        </center>
+        <!-- /.col -->
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+  <!-- </div> -->
+  <div class="card">
+    <div class="card-body">
+      <table id="example1" class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Complaint Title</th>
+            <th>Semester </th>
+            <th>Course</th>
+            <th>Status </th>
+            <th>Message</th>
+            <th>Admin Reply </th>
+            <th>Action</th>
+        </thead>
+        <tfoot>
+          <tbody>
+            <% d.forEach((item)=>{%>
+  
+            <tr>
+              <td><%=item._id%></td>
+              <td><%=item.comptitle%></td>
+              <td><%=item.semester%></td>
+              <td><%=item.course%></td>
+              <td class="bg-secondary"><%=item.status%></td>
+              <td><%=item.comment%></td>
+              <td>
+                <form action="/admin/update_status/<%= item._id%>" method="post">
+                  <textarea name="comment" class="form-control"></textarea>
+              </td>
+              <td>
+                <button type="submit" name="status" class="btn btn-success" value="Approved"><i class="fa-solid fa-check"></i></button>
+                <button type="submit" name="status" class="btn btn-danger" value="Reject"><i class="fa-solid fa-xmark"></i></button>
+                <a href="/complaint/view/<%=item._id%>" class="btn btn-info"><i class="fa-solid fa-eye"></i></a>
+              </form>
+              </td>
+            </tr>
+            <% })%>
+          </tbody>
+        </tfoot>
+      </table>
+    </div>
+    <!-- /.card-body -->
+  </div>
+  <!-- /.card -->
+</div>
+
+ <!-- <div class="modal fade" id="modal-default">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Add Students</h4>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form
+          action="/admin/courseInsert"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="form-group">
+            <label for="">email</label>
+            <input type="text" name="email" class="form-control" value="" required />
+            <label for="">Course name</label>
+            <input type="course" name="course" class="form-control" required />
+            <center>
+              <button
+                class="btn btn-info"
+                type="submit"
+                style="margin-top: 25px"
+              >
+                Submit
+              </button>
+            </center>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>  -->
+<%- include("../admin/footer.ejs") %>
+
+

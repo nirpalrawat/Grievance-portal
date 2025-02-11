@@ -1,0 +1,205 @@
+<%- include("./header.ejs") %> <%- include("./sidebar.ejs") %>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Student Profile</h1>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Starter Page</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <div class="container d-flex justify-content-center">
+    <div class="card text-center">
+      <h2 class="mt-1">Admin profile</h2>
+      <div class="profile-img">
+        <img
+          src="<%=image.url %>"
+          width="100px"
+          class="profile-img rounded-circle"
+          style="border-radius: 50%"
+          alt="Profile Image"
+        />
+        <h2><i class="fa-solid fa-user"></i>Hello <%=name %></h2>
+        <h3 class="ml-3"><i class="fa-solid fa-envelope"></i><%= email %></h3>
+        <h3 class="card-text mt-2">Collage Admin</h3>
+      </div>
+      <div class="social-icons w-2 h-2 mb-2">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+
+      <button
+        type="button"
+        class="btn btn-primary mb-2"
+        data-bs-toggle="modal"
+        data-bs-target="#UpdateProfile"
+      >
+        Update Profile
+      </button>
+      <button
+        type="button"
+        class="btn btn-primary mb-2"
+        data-bs-toggle="modal"
+        data-bs-target="#UpdatePassword"
+      >
+        Update Password
+      </button>
+    </div>
+  </div>
+  <!-- Update profile -->
+  <div
+    class="modal fade"
+    id="UpdateProfile"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Profile</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form
+            action="/updateprofile"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="form-group">
+              <label for="newName">New Name</label>
+              <input
+                type="text"
+                name="name"
+                value="<%=name%>"
+                class="form-control"
+                id="newName"
+                placeholder="Enter your new name"
+                required
+                
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="Email">Email</label>
+              <input
+                type="email"
+                name="email"
+                value="<%=email%>"
+                class="form-control"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="profileImage">Profile Image</label>
+              <input
+                type="file"
+                name="image"
+                class="form-control-file"
+                id="profileImage"
+              />
+              <img src="<%=image.url%>" alt="" width="80" />
+            </div>
+
+            <button type="submit" class="btn btn-success btn-block mt-5">
+              Save Changes
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Update password -->
+  <div
+    class="modal fade"
+    id="UpdatePassword"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Password</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="/updatepassword" method="post">
+            <div class="form-group">
+              <label for="oldPassword">Old Password</label>
+              <input
+                type="password"
+                name="oldpassword"
+                class="form-control"
+                id="oldPassword"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="np">New Password</label>
+              <input
+                type="password"
+                name="newpassword"
+                class="form-control"
+                id="newPassword"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                name="confirmpassword"
+                class="form-control"
+                id="confirmPassword"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-success mt-3">
+                Change Password
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%- include("../footer.ejs") %>
+</div>

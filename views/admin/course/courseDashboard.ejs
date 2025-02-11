@@ -1,0 +1,128 @@
+<%- include("../header.ejs") %> <%- include("../sidebar.ejs") %>
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Display</h1>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active">Display</li>
+          </ol>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+  <!-- </div> -->
+  <div class="card">
+    <button
+      type="button"
+      class="btn btn-info"
+      style="float: left"
+      data-toggle="modal"
+      data-target="#modal-default"
+    >
+      Add Course
+    </button>
+    <!-- /.card-header -->
+    <div class="card-body">
+      <table id="example1" class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Course</th>
+        </thead>
+        <tfoot>
+          <tbody>
+          <% d.forEach((item)=>{%>
+
+          <tr>
+            <td><%=item._id%></td>
+            <td><%=item.email%></td>
+            <td><%=item.course%></td>
+            <td>
+              <a href="/admin/courseview/<%=item._id%>" class="btn btn-info"><i class="fa-solid fa-eye"></i></a>
+              <a href="/admin/courseedit/<%=item._id%>" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
+              <a href="/admin/coursedelete/<%=item._id%>" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+            </td>
+          </tr>
+          <% })%>
+        </tbody>
+        </tfoot>
+      </table>
+    </div>
+    <!-- /.card-body -->
+  </div>
+  <!-- /.card -->
+</div>
+
+<div class="modal fade" id="modal-default">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Add Students</h4>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form
+          action="/admin/courseInsert"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="form-group">
+            <label for="">email</label>
+            <input type="text" name="email" class="form-control" value="" required />
+            <label for="">Course name</label>
+            <input type="course" name="course" class="form-control" required />
+            <!-- <label for="course">Course:</label>
+            <br>
+            <select id="course" name="course" required>
+                <option value="" disabled selected>Select Course</option>
+                <option value="mca">MCA</option>
+                <option value="bca">BCA</option>
+                <option value="btech_it">Btech(IT)</option>
+                <option value="btech_cs">Btech(CS)</option>
+                <option value="btech_civil">Btech(Civil)</option>
+                <option value="btech_mech">Btech(MECHANICAL)</option>
+                <option value="btech_elec">Btech(ELECTRONICS)</option>
+                <option value="mtech">M-Tech</option>
+                <option value="mba">MBA</option>
+                <option value="bba">BBA</option>
+            </select>
+            <br> -->
+            <center>
+              <button
+                class="btn btn-info"
+                type="submit"
+                style="margin-top: 25px"
+              >
+                Submit
+              </button>
+            </center>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<%- include("../footer.ejs") %>
