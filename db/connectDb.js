@@ -1,17 +1,22 @@
-const mongoose = require("mongoose");
-const Live_URL =
-  "mongodb+srv://anuragkofficial21:ram123@cluster0.r3sc4oj.mongodb.net/graviancePoratl?retryWrites=true&w=majority";
-const Local_URL = "mongodb://127.0.0.1:27017/grievanceportal";
+const mongoose =require('mongoose')
 
-const connectDb = () => {
-  return mongoose.connect(Local_URL)
-//   return mongoose.connect(Live_URL)
-    .then(() => {
-      console.log("connect successfully");
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-};
+const Local_url = 'mongodb://127.0.0.1:27017/admissionportalprojact';
+const live_url = 'mongodb+srv://nirpalrawat:LHQXtw6MVi6suedl@cluster0.1simf.mongodb.net/Admissionportal?retryWrites=true&w=majority&appName=Cluster0'
+const connectDb = () =>{
 
-module.exports = connectDb;
+    return mongoose.connect(live_url)
+
+.then(()=>{
+
+    console.log('connect db')
+
+})
+.catch((error)=>{
+
+    console.log(error)
+})
+
+
+}
+
+module.exports = connectDb
